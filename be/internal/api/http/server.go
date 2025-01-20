@@ -7,8 +7,6 @@ import (
 	"sync"
 	"time"
 
-	// "github.com/HironixRotifer/yar-game/internal/api/http/routes"
-	// "github.com/HironixRotifer/yar-game/internal/storage/sqlite"
 	"github.com/rs/zerolog/log"
 
 	"github.com/gin-gonic/gin"
@@ -27,7 +25,6 @@ type ServerHTTP struct {
 
 func NewServerHTTP(port int) *ServerHTTP {
 	handler := gin.Default()
-	// routes.Routes(handler, db)
 
 	addr := fmt.Sprintf(":%v", port)
 	server := &http.Server{Addr: addr, Handler: handler}
